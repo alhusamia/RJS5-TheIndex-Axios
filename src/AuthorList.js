@@ -7,6 +7,7 @@ import SearchBar from "./SearchBar";
 class AuthorList extends Component {
   state = {
     filteredAuthors: this.props.authors
+    
   };
 
   filterAuthors = query => {
@@ -15,6 +16,7 @@ class AuthorList extends Component {
         .toLowerCase()
         .includes(query.toLowerCase());
     });
+    
     this.setState({ filteredAuthors: filteredAuthors });
   };
   render() {
